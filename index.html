@@ -3,884 +3,673 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Хрусталёв Продакшн — Документальные фильмы и съемка мероприятий</title>
-  <meta name="description" content="Киноистории для бизнеса и брендов. Съемка форумов, фестивалей, конференций и спортивных мероприятий полного цикла.">
+  <title>Хрусталёв Продакшн — Документальное кино и съемка мероприятий</title>
+  <meta name="description" content="Смысловые фильмы для бизнеса и брендов. Профессиональная съемка форумов, фестивалей, конференций и спортивных турниров полного цикла.">
   
-  <!-- Fonts: Sharp Grotesque (Inter) + Technical Film Slate Monospace (JetBrains Mono) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- ==========================================================================
-       SITE HEADER / NAVIGATION
-       ========================================================================== -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#" class="brand-wrap">
-        <span class="brand-title">ХРУСТАЛЁВ ПРОДАКШН</span>
-        <span class="brand-meta">// DOC & EVENTS</span>
-      </a>
+  <!-- ─── NAV ─── -->
+  <nav id="nav">
+    <a href="#" class="nav-logo">
+      <span>Хрусталёв Продакшн</span>
+      <span class="nav-logo-sub">/ Кино &amp; Ивенты</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#direction" onclick="closeNav()">Направления</a></li>
+      <li><a href="#works" onclick="closeNav()">Работы</a></li>
+      <li><a href="#process" onclick="closeNav()">Процесс</a></li>
+      <li><a href="#about" onclick="closeNav()">Обо мне</a></li>
+      <li><a href="#contacts" onclick="closeNav()">Контакты</a></li>
+      <li><a href="#contacts" class="nav-cta-btn" onclick="closeNav()">Обсудить проект</a></li>
+    </ul>
+    <div class="nav-burger" id="burger" onclick="toggleNav()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
 
-      <nav>
-        <ul class="nav-menu">
-          <li><a href="#directions" class="nav-link"><span>01</span> Направления</a></li>
-          <li><a href="#featured" class="nav-link"><span>02</span> Кейс</a></li>
-          <li><a href="#portfolio" class="nav-link"><span>03</span> Портфолио</a></li>
-          <li><a href="#process" class="nav-link"><span>04</span> Процесс</a></li>
-          <li><a href="#about" class="nav-link"><span>05</span> О нас</a></li>
-          <li><a href="#contacts" class="nav-link"><span>06</span> Контакты</a></li>
-        </ul>
-      </nav>
-
-      <div style="display:flex; align-items:center; gap:16px;">
-        <a href="#contacts" class="header-cta-btn">Обсудить проект</a>
-        <button class="mobile-menu-toggle" aria-label="Меню">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+  <!-- ─── HERO ─── -->
+  <section class="hero">
+    <div class="hero-cell big">
+      <img src="images/hero_1.png" alt="Документальное кино">
+      <div class="hero-label">001 / Документальное кино</div>
+    </div>
+    <div class="hero-cell">
+      <img src="images/hero_2.jpg" alt="Монтажный постпродакшн">
+      <div class="hero-label">002 / Монтаж &amp; Пост</div>
+    </div>
+    <div class="hero-cell">
+      <img src="images/hero_3.png" alt="Съемка мероприятий">
+      <div class="hero-label">003 / Ивенты &amp; Шоу</div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-center">
+      <div class="hero-eyebrow">Продакшн полного цикла &bull; Режиссура &bull; 10+ лет</div>
+      <h1 class="hero-title">Документальное кино<br>и <em>мероприятия</em></h1>
+      <p class="hero-sub">Смысловые фильмы для бизнеса и брендов + съемка масштабных форумов, фестивалей и турниров</p>
+      <div class="hero-btns">
+        <a href="#contacts" class="hero-btn-primary">Обсудить проект &rarr;</a>
+        <a href="#works" class="hero-btn-secondary">Смотреть работы</a>
       </div>
     </div>
-  </header>
-
-  <!-- ==========================================================================
-       HERO SECTION (DIRECT B2B OFFER + EDITORIAL SLATE)
-       ========================================================================== -->
-  <section class="hero-section">
-    <!-- Ambient Background Grid (Film Frames) -->
-    <div class="hero-grid-bg">
-      <div class="hero-bg-col"><img src="images/hero_1.png" alt="Съемки кино"></div>
-      <div class="hero-bg-col"><img src="images/hero_2.jpg" alt="Монтажный процесс"></div>
-      <div class="hero-bg-col"><img src="images/hero_3.png" alt="Операторская работа"></div>
-    </div>
-    <div class="hero-overlay-gradient"></div>
-
-    <div class="container hero-content">
-      <div class="hero-eyebrow-row">
-        <span class="mono-tag"><span class="rec-dot"></span> REC ● 00:00:24:12</span>
-        <span class="mono-label">МОСКВА &bull; СНГ &bull; FULL-CYCLE PRODUCTION</span>
-      </div>
-
-      <h1 class="hero-main-title">
-        Документальные фильмы для бизнеса и съемка <span class="highlight-accent">масштабных мероприятий</span>
-      </h1>
-
-      <p class="hero-lead-text">
-        Создаем смысловое видео полного цикла: от глубоких бренд-фильмов и историй компаний 
-        до динамичной многокамерной съемки форумов, фестивалей и спортивных шоу. 
-        Уверенно упаковываем смыслы, которые работают на продажи и статус бренда.
-      </p>
-
-      <div class="hero-actions">
-        <a href="#contacts" class="btn-primary">Обсудить проект &rarr;</a>
-        <a href="#portfolio" class="btn-secondary">Смотреть работы [&darr;]</a>
-      </div>
-    </div>
-
-    <!-- Editorial Metric Bar (Film Technical Specs) -->
-    <div class="container">
-      <div class="hero-meta-bar">
-        <div class="meta-item">
-          <span class="meta-item-val">10+ ЛЕТ</span>
-          <span class="meta-item-desc">В режиссуре и постпродакшне</span>
-        </div>
-        <div class="meta-item">
-          <span class="meta-item-val">40+ МЛН</span>
-          <span class="meta-item-desc">Суммарных просмотров работ</span>
-        </div>
-        <div class="meta-item">
-          <span class="meta-item-val">FULL-CYCLE</span>
-          <span class="meta-item-desc">Сценарий &bull; Съемка &bull; Монтаж &bull; Звук</span>
-        </div>
-        <div class="meta-item">
-          <span class="meta-item-val">4K PRORES</span>
-          <span class="meta-item-desc">Кинооптика и чистый мастеринг</span>
-        </div>
-      </div>
+    <div class="hero-scroll">
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M8 2v12M3 9l5 5 5-5"/></svg>
+      <span>листать</span>
     </div>
   </section>
 
-  <!-- ==========================================================================
-       SECTION 01: TWO CORE DIRECTIONS (DOCS & EVENTS)
-       ========================================================================== -->
-  <section id="directions" class="section">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-meta-tag">
-          <span class="mono-tag">// 01 НАПРАВЛЕНИЯ</span>
-          <span class="mono-label">СПЕЦИАЛИЗАЦИЯ ПРОДАКШНА</span>
-        </div>
-        <h2 class="section-title">Два ключевых фокуса работы</h2>
-        <p class="section-desc">
-          Мы не распыляемся на случайные форматы. Наша экспертиза сосредоточена на двух мощных направлениях, 
-          где важны драматургия, масштаб и безупречная картинка.
-        </p>
+  <!-- ─── MARQUEE ─── -->
+  <div class="marquee">
+    <div class="marquee-track">
+      <span>Документальный фильм</span><span class="marquee-dot"></span>
+      <span>Съемка мероприятий</span><span class="marquee-dot"></span>
+      <span>Бренд-документалистика</span><span class="marquee-dot"></span>
+      <span>Aftermovies &amp; Шоу</span><span class="marquee-dot"></span>
+      <span>История компании</span><span class="marquee-dot"></span>
+      <span>Многокамерная съемка</span><span class="marquee-dot"></span>
+      <span>Документальный фильм</span><span class="marquee-dot"></span>
+      <span>Съемка мероприятий</span><span class="marquee-dot"></span>
+      <span>Бренд-документалистика</span><span class="marquee-dot"></span>
+      <span>Aftermovies &amp; Шоу</span><span class="marquee-dot"></span>
+    </div>
+  </div>
+
+  <!-- ─── DIRECTION (2 НАПРАВЛЕНИЯ) ─── -->
+  <section id="direction" class="direction">
+    <div class="direction-grid">
+      <div>
+        <div class="sec-tag">Специализация</div>
+        <h2 class="sec-heading">Истории и события,<br>которые <em>остаются</em></h2>
       </div>
-
-      <div class="directions-grid">
-        <!-- Direction 1: Documentaries & Brand Films -->
-        <div class="direction-card">
-          <div>
-            <div class="direction-card-header">
-              <span class="mono-tag">[B2B STORYTELLING]</span>
-              <span class="direction-num">01 / 02</span>
-            </div>
-            <h3 class="direction-name">Документальное кино &amp; Бренд-фильмы</h3>
-            <p class="direction-summary">
-              Кинематографичные фильмы о компаниях, производствах и основателях. 
-              Раскрываем ценности через живых героев, создавая инструмент доверия для клиентов, партнеров и инвесторов.
-            </p>
-            <ul class="direction-bullets">
-              <li>
-                <span class="bullet-label">Форматы</span>
-                <span class="bullet-val">Бренд-доки, полный метр, история основателя, юбилей компании</span>
-              </li>
-              <li>
-                <span class="bullet-label">Для кого</span>
-                <span class="bullet-val">Производства, IT-компании, девелоперы, институты развития</span>
-              </li>
-              <li>
-                <span class="bullet-label">Бизнес-цель</span>
-                <span class="bullet-val">Укрепление статуса, презентации для инвесторов, продажи B2B</span>
-              </li>
-            </ul>
-          </div>
-          <div class="direction-action">
-            <a href="#portfolio" data-switch-tab="docs" class="direction-btn">Смотреть кейсы фильмов &rarr;</a>
-          </div>
-        </div>
-
-        <!-- Direction 2: Events & Large-Scale Shows -->
-        <div class="direction-card">
-          <div>
-            <div class="direction-card-header">
-              <span class="mono-tag">[EVENT PRODUCTION]</span>
-              <span class="direction-num">02 / 02</span>
-            </div>
-            <h3 class="direction-name">Съемка ивентов &amp; Масштабных мероприятий</h3>
-            <p class="direction-summary">
-              Динамичные aftermovies, многокамерная съемка и отчетные фильмы с конференций, 
-              форумов, фестивалей, спортивных лиг и корпоративных событий. Фиксируем масштаб и атмосферу без шаблонов.
-            </p>
-            <ul class="direction-bullets">
-              <li>
-                <span class="bullet-label">Форматы</span>
-                <span class="bullet-val">Aftermovies, многокамерная запись, репортаж, быстрый контент</span>
-              </li>
-              <li>
-                <span class="bullet-label">Для кого</span>
-                <span class="bullet-val">Организаторы фестивалей, бизнес-форумы, бренды, спортивные турниры</span>
-              </li>
-              <li>
-                <span class="bullet-label">Бизнес-цель</span>
-                <span class="bullet-val">Продажа билетов на след. год, отчет спонсорам, взрывной охват</span>
-              </li>
-            </ul>
-          </div>
-          <div class="direction-action">
-            <a href="#portfolio" data-switch-tab="events" class="direction-btn">Смотреть кейсы мероприятий &rarr;</a>
-          </div>
-        </div>
+      <div>
+        <p class="sec-sub">Мы сосредоточены на двух ключевых направлениях, где важны кинематографичная драматургия, живой нерв и безупречная картинка.</p>
       </div>
     </div>
-  </section>
 
-  <!-- ==========================================================================
-       SECTION 02: FEATURED CASE (Швейная фабрика)
-       ========================================================================== -->
-  <section id="featured" class="section">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-meta-tag">
-          <span class="mono-tag">// 02 FEATURED CASE</span>
-          <span class="mono-label">ГЛАВНЫЙ КЕЙС</span>
-        </div>
-        <h2 class="section-title">Швейная фабрика: живая история производства</h2>
-      </div>
-
-      <div class="featured-case">
-        <div class="featured-media" data-vimeo-id="1190486414">
-          <img src="images/vimeo_1190486414.jpg" alt="Швейная фабрика — живая история">
-          <div class="play-badge">
-            <svg width="18" height="20" viewBox="0 0 16 18" fill="#ffffff"><path d="M1 1l14 8L1 17V1z"/></svg>
-          </div>
-          <div class="media-player-container"></div>
-        </div>
-
-        <div class="featured-content">
-          <div>
-            <span class="mono-tag">[БРЕНД-ДОКУМЕНТАЛИСТИКА]</span>
-            <h3 class="featured-case-title">Как показать силу производства через людей, а не через станки</h3>
-
-            <div class="case-meta-grid">
-              <div class="case-meta-row">
-                <span class="case-meta-key">Клиент:</span>
-                <span class="case-meta-value"><strong>Швейная фабрика Мусатова</strong></span>
-              </div>
-              <div class="case-meta-row">
-                <span class="case-meta-key">Задача:</span>
-                <span class="case-meta-value">Рассказать историю фабрики так, чтобы оптовые партнеры и дистрибьюторы увидели не безликий цех, а реальную культуру мастерства и надежность.</span>
-              </div>
-              <div class="case-meta-row">
-                <span class="case-meta-key">Решение:</span>
-                <span class="case-meta-value">3 съемочных дня полного погружения. Кинематографичный свет, съемка всего цикла от эскиза до пошива и глубокие интервью с мастерами, работающими здесь десятилетиями.</span>
-              </div>
-              <div class="case-meta-row">
-                <span class="case-meta-key">Результат:</span>
-                <span class="case-meta-value"><strong>Фильм стал ключевым инструментом в B2B-переговорах</strong> — повысил конверсию в закрытие крупных контрактов и укрепил лояльность дилеров.</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="case-stats-strip">
-            <div class="case-stat-item">
-              <span class="case-stat-number">30+</span>
-              <span class="case-stat-desc">Лет истории</span>
-            </div>
-            <div class="case-stat-item">
-              <span class="case-stat-number">3</span>
-              <span class="case-stat-desc">Дня съемок</span>
-            </div>
-            <div class="case-stat-item">
-              <span class="case-stat-number">9 мин</span>
-              <span class="case-stat-desc">Хронометраж</span>
-            </div>
-            <div class="case-stat-item">
-              <span class="case-stat-number">B2B</span>
-              <span class="case-stat-desc">Инструмент продаж</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       SECTION 03: PORTFOLIO WITH TABS (DOCS / EVENTS / ALL)
-       ========================================================================== -->
-  <section id="portfolio" class="section">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-meta-tag">
-          <span class="mono-tag">// 03 ПОРТФОЛИО</span>
-          <span class="mono-label">ИЗБРАННЫЕ РАБОТЫ</span>
-        </div>
-        <h2 class="section-title">Проекты в фокусе</h2>
-        <p class="section-desc">
-          Фильтруйте работы по направлениям. В каждом проекте отражены реальные задачи заказчика и измеримый результат.
-        </p>
-      </div>
-
-      <!-- Navigation Tabs -->
-      <div class="portfolio-tabs-nav">
-        <button class="tab-btn active" data-filter="all">Все проекты <span class="tab-badge-count">(8)</span></button>
-        <button class="tab-btn" data-filter="docs">Документальные фильмы <span class="tab-badge-count">(3)</span></button>
-        <button class="tab-btn" data-filter="events">Мероприятия &amp; Ивенты <span class="tab-badge-count">(3)</span></button>
-        <button class="tab-btn" data-filter="promo">Реклама &amp; Постпродакшн <span class="tab-badge-count">(2)</span></button>
-      </div>
-
-      <!-- Portfolio Grid -->
-      <div class="portfolio-grid">
-
-        <!-- Case 1: ИРИ (Docs) -->
-        <div class="case-card" data-category="docs">
-          <div class="case-card-media" data-vimeo-id="1173756846">
-            <span class="case-card-badge mono-tag">ДОКУМЕНТАЛЬНЫЙ ПОЛНЫЙ МЕТР</span>
-            <span class="case-card-duration">VIMEO</span>
-            <img src="images/vimeo_1173756846.jpg" alt="Фильм Искажение">
-            <div class="case-card-overlay"></div>
-            <div class="card-play-icon">
-              <svg width="15" height="17" viewBox="0 0 16 18" fill="#ffffff"><path d="M1 1l14 8L1 17V1z"/></svg>
-            </div>
-            <div class="card-player"></div>
-          </div>
-          <div class="case-card-body">
-            <h3 class="case-card-title">Искажение</h3>
-            <div class="case-structured-info">
-              <div class="info-line">
-                <span class="info-key">Клиент:</span>
-                <span class="info-val"><strong>Институт Развития Интернета (ИРИ) &bull; 2024</strong></span>
-              </div>
-              <div class="info-line">
-                <span class="info-key">Задача:</span>
-                <span class="info-val">Создать полнометражный документальный фильм с глубокой драматургией, архивными исследованиями и киноэстетикой.</span>
-              </div>
-              <div class="info-line">
-                <span class="info-key">Результат:</span>
-                <span class="info-val"><strong>Официальный релиз при поддержке ИРИ</strong>, дистрибуция на федеральных онлайн-платформах.</span>
-              </div>
-            </div>
-            <div class="case-card-footer">
-              <span class="mono-label">FULL LENGTH // 4K</span>
-              <span class="link-action">Смотреть трейлер &rarr;</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Case 2: ТАУ — Фестиваль (Events) -->
-        <div class="case-card" data-category="events">
-          <div class="case-card-media" data-vimeo-id="1190482719">
-            <span class="case-card-badge mono-tag">МЕРОПРИЯТИЕ &bull; ФЕСТИВАЛЬ</span>
-            <span class="case-card-duration">VIMEO</span>
-            <img src="images/vimeo_1190482719.jpg" alt="ТАУ Фестиваль">
-            <div class="case-card-overlay"></div>
-            <div class="card-play-icon">
-              <svg width="15" height="17" viewBox="0 0 16 18" fill="#ffffff"><path d="M1 1l14 8L1 17V1z"/></svg>
-            </div>
-            <div class="card-player"></div>
-          </div>
-          <div class="case-card-body">
-            <h3 class="case-card-title">ТАУ — Фестиваль</h3>
-            <div class="case-structured-info">
-              <div class="info-line">
-                <span class="info-key">Клиент:</span>
-                <span class="info-val"><strong>Оргкомитет Фестиваля ТАУ</strong></span>
-              </div>
-              <div class="info-line">
-                <span class="info-key">Задача:</span>
-                <span class="info-val">Снять взрывной динамичный Aftermovie, передающий масштаб площадки, свет, энергетику хедлайнеров и гостей.</span>
-              </div>
-              <div class="info-line">
-                <span class="info-key">Результат:</span>
-                <span class="info-val"><strong>Главный промо-ролик фестиваля</strong> для медиакампании следующего сезона и спонсорских отчетов.</span>
-              </div>
-            </div>
-            <div class="case-card-footer">
-              <span class="mono-label">AFTERMOVIE // EVENT</span>
-              <span class="link-action">Смотреть видео &rarr;</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Case 3: Hardcore Fighting Reality (Events) -->
-        <div class="case-card" data-category="events">
-          <div class="case-card-media" data-external-url="https://vksport.vkvideo.ru/video-202875834_456240530?pl=-202875834_6">
-            <span class="case-card-badge mono-tag">СПОРТ &bull; ИВЕНТ &bull; РЕАЛИТИ</span>
-            <span class="case-card-duration">1.4 МЛН ПРОСМОТРОВ</span>
-            <img src="images/hardcore_fighting.jpg" alt="Hardcore Fighting Reality">
-            <div class="case-card-overlay"></div>
-            <div class="card-play-icon">
-              <svg width="15" height="17" viewBox="0 0 16 18" fill="#ffffff"><path d="M1 1l14 8L1 17V1z"/></svg>
-            </div>
-          </div>
-          <div class="case-card-body">
-            <h3 class="case-card-title">Hardcore Fighting Reality</h3>
-            <div class="case-structured-info">
-              <div class="info-line">
-                <span class="info-key">Клиент:</span>
-                <span class="info-val"><strong>Лига Hardcore &bull; VK Video</strong></span>
-              </div>
-              <div class="info-line">
-                <span class="info-key">Задача:</span>
-                <span class="info-val">Многокамерная съемка спортивного реалити-турнира с быстрым репортажным темпом и драматичным монтажом боев.</span>
-              </div>
-              <div class="info-line">
-                <span class="info-key">Результат:</span>
-                <span class="info-val"><strong>1,4 млн просмотров в VK Video</strong>, удержание внимания аудитории и высокий уровень продакшна трансляции.</span>
-              </div>
-            </div>
-            <div class="case-card-footer">
-              <span class="mono-label">VK VIDEO // 1.4M VIEWS</span>
-              <a href="https://vksport.vkvideo.ru/video-202875834_456240530?pl=-202875834_6" target="_blank" class="link-action">Смотреть в VK Video &nearr;</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Case 4: Alf Reality (Events) -->
-        <div class="case-card" data-category="events">
-          <div class="case-card-media" data-external-url="https://www.youtube.com/watch?v=TX6wJ-E-OvE&list=PL458JhnKFrqd6jfcn1OzXo03MdfB0Prj9&index=13">
-            <span class="case-card-badge mono-tag">МЕДИА-ШОУ &bull; ИВЕНТ</span>
-            <span class="case-card-duration">2.3 МЛН ПРОСМОТРОВ</span>
-            <img src="images/alf_reality.jpg" alt="Alf Reality">
-            <div class="case-card-overlay"></div>
-            <div class="card-play-icon">
-              <svg width="15" height="17" viewBox="0 0 16 18" fill="#ffffff"><path d="M1 1l14 8L1 17V1z"/></svg>
-            </div>
-          </div>
-          <div class="case-card-body">
-            <h3 class="case-card-title">Alf Reality</h3>
-            <div class="case-structured-info">
-              <div class="info-line">
-                <span class="info-key">Клиент:</span>
-                <span class="info-val"><strong>Alf Reality &bull; YouTube</strong></span>
-              </div>
-              <div class="info-line">
-                <span class="info-key">Задача:</span>
-                <span class="info-val">Съемка медийно-спортивного реалити на стыке динамичного экшна, живых конфликтов и качественного звука.</span>
-              </div>
-              <div class="info-line">
-                <span class="info-key">Результат:</span>
-                <span class="info-val"><strong>2,3 млн просмотров серии на YouTube</strong>, попадание в тренды и виральный охват в соцсетях.</span>
-              </div>
-            </div>
-            <div class="case-card-footer">
-              <span class="mono-label">YOUTUBE // 2.3M VIEWS</span>
-              <a href="https://www.youtube.com/watch?v=TX6wJ-E-OvE&list=PL458JhnKFrqd6jfcn1OzXo03MdfB0Prj9&index=13" target="_blank" class="link-action">Смотреть на YouTube &nearr;</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Case 5: Сбер Ассистент (Promo) -->
-        <div class="case-card" data-category="promo">
-          <div class="case-card-media" data-vimeo-id="1190482600">
-            <span class="case-card-badge mono-tag">РЕКЛАМА &bull; ПРОДУКТОВЫЙ РОЛИК</span>
-            <span class="case-card-duration">VIMEO</span>
-            <img src="images/vimeo_1190482600.jpg" alt="Сбер Ассистент">
-            <div class="case-card-overlay"></div>
-            <div class="card-play-icon">
-              <svg width="15" height="17" viewBox="0 0 16 18" fill="#ffffff"><path d="M1 1l14 8L1 17V1z"/></svg>
-            </div>
-            <div class="card-player"></div>
-          </div>
-          <div class="case-card-body">
-            <h3 class="case-card-title">Сбер Ассистент</h3>
-            <div class="case-structured-info">
-              <div class="info-line">
-                <span class="info-key">Клиент:</span>
-                <span class="info-val"><strong>Сбербанк &bull; 2024</strong></span>
-              </div>
-              <div class="info-line">
-                <span class="info-key">Задача:</span>
-                <span class="info-val">Показать возможности смарт-ассистента в реальных пользовательских сценариях с лаконичной графикой и кинокартинкой.</span>
-              </div>
-              <div class="info-line">
-                <span class="info-key">Результат:</span>
-                <span class="info-val"><strong>Интеграция в федеральную продуктовую кампанию</strong> Сбера, высокие показатели досмотра.</span>
-              </div>
-            </div>
-            <div class="case-card-footer">
-              <span class="mono-label">COMMERCIAL // B2C</span>
-              <span class="link-action">Смотреть видео &rarr;</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Case 6: Антоша из шестой (Promo / Post-production) -->
-        <div class="case-card" data-category="promo">
-          <div class="case-card-media" data-vimeo-id="1190482143">
-            <span class="case-card-badge mono-tag">ПОСТПРОДАКШН &bull; СТРИМИНГ</span>
-            <span class="case-card-duration">VIMEO</span>
-            <img src="images/vimeo_1190482143.jpg" alt="Антоша из шестой">
-            <div class="case-card-overlay"></div>
-            <div class="card-play-icon">
-              <svg width="15" height="17" viewBox="0 0 16 18" fill="#ffffff"><path d="M1 1l14 8L1 17V1z"/></svg>
-            </div>
-            <div class="card-player"></div>
-          </div>
-          <div class="case-card-body">
-            <h3 class="case-card-title">Антоша из шестой</h3>
-            <div class="case-structured-info">
-              <div class="info-line">
-                <span class="info-key">Клиент:</span>
-                <span class="info-val"><strong>Wink Originals &bull; Стриминг</strong></span>
-              </div>
-              <div class="info-line">
-                <span class="info-key">Задача:</span>
-                <span class="info-val">Полный комплекс монтажа, цветокоррекции, саунд-дизайна и сведения под жесткие технические требования OTT-платформы.</span>
-              </div>
-              <div class="info-line">
-                <span class="info-key">Результат:</span>
-                <span class="info-val"><strong>Финальная сдача мастер-копии с первого раза</strong>, релиз в подписке онлайн-кинотеатра Wink.</span>
-              </div>
-            </div>
-            <div class="case-card-footer">
-              <span class="mono-label">POST // COLOR & SOUND</span>
-              <span class="link-action">Смотреть шоурил &rarr;</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Case 7: Balancer Light (Promo) -->
-        <div class="case-card" data-category="promo">
-          <div class="case-card-media" data-external-url="https://youtu.be/ujgLai9Aqb4">
-            <span class="case-card-badge mono-tag">РЕКЛАМА &bull; DIGITAL</span>
-            <span class="case-card-duration">YOUTUBE</span>
-            <img src="images/balancer_light.jpg" alt="Balancer Light">
-            <div class="case-card-overlay"></div>
-            <div class="card-play-icon">
-              <svg width="15" height="17" viewBox="0 0 16 18" fill="#ffffff"><path d="M1 1l14 8L1 17V1z"/></svg>
-            </div>
-          </div>
-          <div class="case-card-body">
-            <h3 class="case-card-title">Balancer Light</h3>
-            <div class="case-structured-info">
-              <div class="info-line">
-                <span class="info-key">Клиент:</span>
-                <span class="info-val"><strong>Бренд здорового питания Balancer</strong></span>
-              </div>
-              <div class="info-line">
-                <span class="info-key">Задача:</span>
-                <span class="info-val">Быстрый коммерческий видеоролик для рекламы в соцсетях и на маркетплейсах.</span>
-              </div>
-              <div class="info-line">
-                <span class="info-key">Результат:</span>
-                <span class="info-val"><strong>Рост CTR в рекламных кампаниях</strong> за счет аппетитной макросъемки и чистого ритма.</span>
-              </div>
-            </div>
-            <div class="case-card-footer">
-              <span class="mono-label">PRODUCT AD // DIGITAL</span>
-              <a href="https://youtu.be/ujgLai9Aqb4" target="_blank" class="link-action">Смотреть ролик &nearr;</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Case 8: Российская креативная неделя (Events) -->
-        <div class="case-card" data-category="events">
-          <div class="case-card-media" data-event-video="rkn">
-            <span class="case-card-badge mono-tag">МЕРОПРИЯТИЕ &bull; ФЕДЕРАЛЬНЫЙ ФОРУМ</span>
-            <span class="case-card-duration">AFTERMOVIE // 4K</span>
-            <img src="images/rcw_creative_week.jpg" alt="Российская креативная неделя">
-            <div class="case-card-overlay"></div>
-            <div class="card-play-icon">
-              <svg width="15" height="17" viewBox="0 0 16 18" fill="#ffffff"><path d="M1 1l14 8L1 17V1z"/></svg>
-            </div>
-            <div class="card-player"></div>
-          </div>
-          <div class="case-card-body">
-            <h3 class="case-card-title">Российская креативная неделя</h3>
-            <div class="case-structured-info">
-              <div class="info-line">
-                <span class="info-key">Клиент:</span>
-                <span class="info-val"><strong>Форум «Российская креативная неделя» (RCW) // АНО «Креативная экономика»</strong></span>
-              </div>
-              <div class="info-line">
-                <span class="info-key">Задача:</span>
-                <span class="info-val">Съемка главного федерального события креативных индустрий: фиксация павильонов, панельных дискуссий с топ-спикерами, динамичный монтаж и атмосфера масштабного нетворкинга.</span>
-              </div>
-              <div class="info-line">
-                <span class="info-key">Результат:</span>
-                <span class="info-val"><strong>Официальный отчетный Aftermovie форума</strong> для федеральных медиа, участников, партнеров и отчетности перед оргкомитетом.</span>
-              </div>
-            </div>
-            <div class="case-card-footer">
-              <span class="mono-label">RCW // GORKY PARK</span>
-              <a href="#contacts" class="link-action">Обсудить подобный ивент &rarr;</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Reels Strip for Events & Digital -->
-      <div class="reels-block">
-        <div class="reels-header">
-          <div>
-            <span class="mono-tag">[SHORT-FORM // REELS]</span>
-            <h3 style="font-size:20px; font-weight:700; margin-top:8px;">Вертикальный контент для ивентов и брендов</h3>
-          </div>
-          <span class="mono-label">4K 9:16 &bull; ЧЕРКА ТРОВА</span>
-        </div>
-        <div class="reels-grid">
-          <div class="reel-card" data-vimeo-id="1190482799">
-            <img src="images/vimeo_1190482799.jpg" alt="Reels 1">
-            <div class="card-play-icon" style="width:40px; height:40px;"><svg width="12" height="14" viewBox="0 0 16 18" fill="#fff"><path d="M1 1l14 8L1 17V1z"/></svg></div>
-            <div class="card-player"></div>
-          </div>
-          <div class="reel-card" data-vimeo-id="1190482836">
-            <img src="images/vimeo_1190482836.jpg" alt="Reels 2">
-            <div class="card-play-icon" style="width:40px; height:40px;"><svg width="12" height="14" viewBox="0 0 16 18" fill="#fff"><path d="M1 1l14 8L1 17V1z"/></svg></div>
-            <div class="card-player"></div>
-          </div>
-          <div class="reel-card" data-vimeo-id="1190482870">
-            <img src="images/vimeo_1190482870.jpg" alt="Reels 3">
-            <div class="card-play-icon" style="width:40px; height:40px;"><svg width="12" height="14" viewBox="0 0 16 18" fill="#fff"><path d="M1 1l14 8L1 17V1z"/></svg></div>
-            <div class="card-player"></div>
-          </div>
-          <div class="reel-card" data-vimeo-id="1190482932">
-            <img src="images/vimeo_1190482932.jpg" alt="Reels 4">
-            <div class="card-play-icon" style="width:40px; height:40px;"><svg width="12" height="14" viewBox="0 0 16 18" fill="#fff"><path d="M1 1l14 8L1 17V1z"/></svg></div>
-            <div class="card-player"></div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       SECTION 04: PRODUCTION PIPELINE / PROCESS
-       ========================================================================== -->
-  <section id="process" class="section">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-meta-tag">
-          <span class="mono-tag">// 04 ПРОЦЕСС</span>
-          <span class="mono-label">PIPELINE &bull; КАК МЫ РАБОТАЕМ</span>
-        </div>
-        <h2 class="section-title">Кинематографичный пайплайн без срывов сроков</h2>
-        <p class="section-desc">
-          Благодаря 10-летнему опыту в постпродакшне мы закладываем чистовую сборку еще на этапе сценария. Никаких бесконечных правок и срывов дедлайнов.
-        </p>
-      </div>
-
-      <div class="process-timeline">
-        <div class="process-node">
-          <div class="process-node-top">
-            <span class="node-idx">// STAGE 01</span>
-            <span class="mono-tag">PRE-PRODUCTION</span>
-          </div>
-          <h3 class="node-title">Смысловой бриф &amp; Драматургия</h3>
-          <p class="node-text">
-            Глубоко исследуем бизнес-цели компании или концепт ивента. Находим стержень истории, героев, пишем сценарий и составляем поминутный таймлайн.
-          </p>
-          <ul class="node-bullets">
-            <li>&bull; Интервью и ресерч</li>
-            <li>&bull; Сценарный план и раскадровка</li>
-            <li>&bull; Скаутинг локаций и кастинг</li>
+    <div class="cats-two">
+      <!-- 01: Docs -->
+      <div class="cat-card">
+        <div>
+          <div class="cat-num">01 / Направление</div>
+          <h3 class="cat-title">Документальное кино &amp; <em>Бренд-фильмы</em></h3>
+          <p class="cat-text">Кинематографичные фильмы о компаниях, производствах и основателях. Раскрываем ценности через живых мастеров и героев, создавая фундаментальный инструмент доверия для клиентов, партнеров и инвесторов.</p>
+          <ul class="cat-bullets">
+            <li>
+              <span class="cat-bullet-label">Форматы</span>
+              <span class="cat-bullet-val">Бренд-доки, полный метр, история основателя, юбилей компании</span>
+            </li>
+            <li>
+              <span class="cat-bullet-label">Для кого</span>
+              <span class="cat-bullet-val">Производства, IT-компании, институты развития, девелоперы</span>
+            </li>
+            <li>
+              <span class="cat-bullet-label">Результат</span>
+              <span class="cat-bullet-val">Инструмент продаж B2B, презентации инвесторам, статус лидера</span>
+            </li>
           </ul>
         </div>
+        <a href="#works" data-switch-tab="docs" class="cat-link">Смотреть фильмы &rarr;</a>
+      </div>
 
-        <div class="process-node">
-          <div class="process-node-top">
-            <span class="node-idx">// STAGE 02</span>
-            <span class="mono-tag">PRODUCTION</span>
-          </div>
-          <h3 class="node-title">Съемка &amp; Режиссура</h3>
-          <p class="node-text">
-            Снимаем на кинокамеры высшего класса. Раскрываем героев перед объективом, фиксируем чистые эмоции и нужный масштаб без искусственности.
-          </p>
-          <ul class="node-bullets">
-            <li>&bull; Профессиональный киносвет</li>
-            <li>&bull; Многокамерные сетапы на ивентах</li>
-            <li>&bull; Чистовая звукозапись на площадке</li>
+      <!-- 02: Events -->
+      <div class="cat-card">
+        <div>
+          <div class="cat-num">02 / Направление</div>
+          <h3 class="cat-title">Съемка ивентов &amp; <em>Мероприятий</em></h3>
+          <p class="cat-text">Динамичные aftermovies, многокамерная съемка и отчетные фильмы с конференций, форумов, фестивалей, спортивных лиг и корпоративных событий. Фиксируем масштаб, свет и чистый драйв события.</p>
+          <ul class="cat-bullets">
+            <li>
+              <span class="cat-bullet-label">Форматы</span>
+              <span class="cat-bullet-val">Aftermovies, многокамерная запись, репортаж, Reels в день ивента</span>
+            </li>
+            <li>
+              <span class="cat-bullet-label">Для кого</span>
+              <span class="cat-bullet-val">Организаторы форумов, фестивали, спортивные турниры, бренды</span>
+            </li>
+            <li>
+              <span class="cat-bullet-label">Результат</span>
+              <span class="cat-bullet-val">Продажи билетов на следующий год, отчет спонсорам, миллионные охваты</span>
+            </li>
           </ul>
         </div>
-
-        <div class="process-node">
-          <div class="process-node-top">
-            <span class="node-idx">// STAGE 03</span>
-            <span class="mono-tag">POST-PRODUCTION</span>
-          </div>
-          <h3 class="node-title">Монтаж &amp; Грейдинг</h3>
-          <p class="node-text">
-            Сборка черновой драматургии, плотный отбор дублей, цветокоррекция в кинематографичной палитре и создание индивидуального саунд-дизайна.
-          </p>
-          <ul class="node-bullets">
-            <li>&bull; Драматургический монтаж</li>
-            <li>&bull; Цветокоррекция (Grading)</li>
-            <li>&bull; Саунд-дизайн и сведение звука</li>
-          </ul>
-        </div>
-
-        <div class="process-node">
-          <div class="process-node-top">
-            <span class="node-idx">// STAGE 04</span>
-            <span class="mono-tag">DELIVERY</span>
-          </div>
-          <h3 class="node-title">Мастеринг &amp; Сдача</h3>
-          <p class="node-text">
-            Подготавливаем мастер-копии в любых требуемых разрешениях: для презентаций на большом экране, стримингов, сайта и нарезок для соцсетей.
-          </p>
-          <ul class="node-bullets">
-            <li>&bull; 4K ProRes &amp; Web-мастера</li>
-            <li>&bull; Пакет вертикальных Reels/Shorts</li>
-            <li>&bull; Полные права на материалы</li>
-          </ul>
-        </div>
+        <a href="#works" data-switch-tab="events" class="cat-link">Смотреть мероприятия &rarr;</a>
       </div>
     </div>
   </section>
 
-  <!-- ==========================================================================
-       SECTION 05: ABOUT & TEAM
-       ========================================================================== -->
-  <section id="about" class="section">
-    <div class="container">
-      <div class="about-split">
-        <div class="about-photo-wrapper">
-          <img src="images/denis_portrait.jpg" alt="Денис Хрусталёв">
-          <div class="about-photo-caption">
-            <span class="brand-title">ДЕНИС ХРУСТАЛЁВ</span>
-            <span class="mono-label">РЕЖИССЁР &bull; ПРОДЮСЕР</span>
-          </div>
+  <!-- ─── CASE: МУСАТОВА ─── -->
+  <section class="case-wrap">
+    <div class="sec-tag">Главный кейс</div>
+    <div class="case-inner">
+      <div class="case-media" data-id="1190486414">
+        <img src="images/vimeo_1190486414.jpg" alt="Швейная фабрика">
+        <div class="case-play">
+          <svg width="14" height="16" fill="#e8e2d4" viewBox="0 0 16 18"><path d="M1 1l14 8L1 17V1z"/></svg>
         </div>
-
-        <div class="about-details">
-          <div class="section-meta-tag">
-            <span class="mono-tag">// 05 О ПРОДАКШНЕ</span>
-            <span class="mono-label">10+ ЛЕТ В КИНО И ВИДЕО</span>
-          </div>
-          <h2 class="section-title">«Мы снимаем видео, которое остается в памяти и решает задачу бизнеса»</h2>
+        <div class="case-player"></div>
+      </div>
+      <div class="case-info">
+        <div>
+          <div class="case-eyebrow">Кейс &bull; Бренд-документалистика</div>
+          <h3 class="case-title">Швейная фабрика —<br><em>живая история</em></h3>
           
-          <p>
-            Меня зовут Денис Хрусталёв. За 10 лет в индустрии я прошел путь от монтажных студий и постпродакшна 
-            до руководства съемками крупных документальных картин, федеральной рекламы и многотысячных мероприятий.
-          </p>
-          <p>
-            В коммерческом видео часто забывают главное: <strong>красивой картинки недостаточно, если за ней нет драматургии и четкой цели</strong>. 
-            Будь то бренд-фильм для швейной фабрики или Aftermovie масштабного турнира — мы делаем так, чтобы зритель досмотрел видео на одном дыхании, 
-            а заказчик получил измеримый коммерческий или имиджевый результат.
-          </p>
-
-          <div class="about-pillars">
-            <div class="pillar-item">
-              <span class="pillar-title">// Продюсер проекта: Алексей Фёдоров</span>
-              <p class="pillar-desc">Контроль сметы, логистика съемочных групп, даты и соблюдение дедлайнов. Тел: +7 (906) 708-41-67</p>
+          <div class="case-details-grid">
+            <div class="case-detail-row">
+              <span class="case-detail-key">Клиент:</span>
+              <span class="case-detail-val"><strong>Швейная фабрика Мусатова</strong></span>
             </div>
-            <div class="pillar-item">
-              <span class="pillar-title">// Режиссура &amp; Худ. руководство: Денис Хрусталёв</span>
-              <p class="pillar-desc">Драматургия, смыслы, режиссура монтажа и кинотеатральное качество картинки и звука.</p>
+            <div class="case-detail-row">
+              <span class="case-detail-key">Задача:</span>
+              <span class="case-detail-val">Рассказать историю фабрики так, чтобы оптовые клиенты и дилеры увидели не безликий цех, а культуру мастерства и людей.</span>
+            </div>
+            <div class="case-detail-row">
+              <span class="case-detail-key">Решение:</span>
+              <span class="case-detail-val">3 съемочных дня на фабрике, кинематографичный свет, показ всего цикла от эскиза до пошива и доверительные интервью с мастерами с многолетним стажем.</span>
+            </div>
+            <div class="case-detail-row">
+              <span class="case-detail-key">Результат:</span>
+              <span class="case-detail-val"><strong>Фильм стал ключевым инструментом в B2B-переговорах</strong> при заключении оптовых контрактов.</span>
             </div>
           </div>
-        </div>
-      </div>
-
-      <!-- Core Team Strip -->
-      <div class="team-grid">
-        <div style="display:flex; justify-content:space-between; align-items:baseline;">
-          <div>
-            <span class="mono-tag">[CORE CREW]</span>
-            <h3 style="font-size:22px; font-weight:700; margin-top:8px;">Команда проекта</h3>
-          </div>
-          <span class="mono-label">ПРОВЕРЕННЫЕ СПЕЦИАЛИСТЫ ИНДУСТРИИ</span>
-        </div>
-
-        <div class="team-photos-strip">
-          <div class="team-photo-item"><img src="images/team_18.jpg" alt="Crew 1"></div>
-          <div class="team-photo-item"><img src="images/team_19.jpg" alt="Crew 2"></div>
-          <div class="team-photo-item"><img src="images/team_20.jpg" alt="Crew 3"></div>
-          <div class="team-photo-item"><img src="images/team_21.jpg" alt="Crew 4"></div>
-          <div class="team-photo-item"><img src="images/team_22.jpg" alt="Crew 5"></div>
-          <div class="team-photo-item"><img src="images/denis_khrustalev.jpg" alt="Crew 6"></div>
         </div>
       </div>
     </div>
+    <div class="case-stats">
+      <div class="case-stat"><div class="case-stat-num">30+</div><div class="case-stat-label">лет истории</div></div>
+      <div class="case-stat"><div class="case-stat-num">3</div><div class="case-stat-label">дня съёмок</div></div>
+      <div class="case-stat"><div class="case-stat-num">9</div><div class="case-stat-label">минут фильма</div></div>
+      <div class="case-stat"><div class="case-stat-num">B2B</div><div class="case-stat-label">инструмент продаж</div></div>
+    </div>
   </section>
 
-  <!-- ==========================================================================
-       SECTION 06: COMPACT CONVERTING CONTACT BLOCK
-       ========================================================================== -->
-  <section id="contacts" class="section contact-section">
-    <div class="container">
-      <div class="contact-layout">
-        
-        <!-- Left: Quick Direct Channels -->
-        <div class="contact-info">
-          <div>
-            <div class="section-meta-tag">
-              <span class="mono-tag">// 06 СВЯЗЬ</span>
-              <span class="mono-label">СТАРТ ПРОЕКТА</span>
-            </div>
-            <h2 class="section-title">Есть проект? Обсудим формат и смету</h2>
-            <p class="section-desc">
-              Напишите нам напрямую в мессенджер или оставьте заявку. Мы изучим вашу задачу, 
-              предложим варианты реализации и подготовим предварительный расчет за 24 часа.
-            </p>
+  <!-- ─── WORKS WITH TABS ─── -->
+  <section id="works" class="works-section">
+    <div class="works-header">
+      <div>
+        <div class="sec-tag">Портфолио</div>
+        <h2 class="sec-heading">Избранные <em>проекты</em></h2>
+      </div>
+      <div>
+        <p class="sec-sub">Переключайте вкладки для фильтрации работ по направлениям без перезагрузки страницы.</p>
+      </div>
+    </div>
 
-            <ul class="direct-channels-list">
-              <li>
-                <a href="https://wa.me/79067084167" target="_blank" class="channel-card" style="border-left: 2px solid var(--accent-amber);">
-                  <div class="channel-info">
-                    <span class="channel-name">Продюсер &bull; Алексей Фёдоров (WhatsApp / Звонок)</span>
-                    <span class="channel-value">+7 (906) 708-41-67</span>
-                  </div>
-                  <span class="link-action">Связаться &nearr;</span>
-                </a>
-              </li>
-              <li>
-                <a href="https://t.me/ygscors" target="_blank" class="channel-card">
-                  <div class="channel-info">
-                    <span class="channel-name">Режиссёр &bull; Денис Хрусталёв (Telegram)</span>
-                    <span class="channel-value">@ygscors</span>
-                  </div>
-                  <span class="link-action">Написать &nearr;</span>
-                </a>
-              </li>
-              <li>
-                <a href="tel:+79067084167" class="channel-card">
-                  <div class="channel-info">
-                    <span class="channel-name">Прямой звонок продюсеру</span>
-                    <span class="channel-value">+7 (906) 708-41-67</span>
-                  </div>
-                  <span class="link-action">Позвонить &nearr;</span>
-                </a>
-              </li>
-              <li>
-                <a href="mailto:khrustalev69@gmail.com" class="channel-card">
-                  <div class="channel-info">
-                    <span class="channel-name">Email для брифов и смет</span>
-                    <span class="channel-value">khrustalev69@gmail.com</span>
-                  </div>
-                  <span class="link-action">Отправить &nearr;</span>
-                </a>
-              </li>
-            </ul>
-          </div>
+    <!-- TABS -->
+    <div class="portfolio-tabs">
+      <button class="tab-btn active" data-filter="all">Все проекты (8)</button>
+      <button class="tab-btn" data-filter="docs">Документальные фильмы (2)</button>
+      <button class="tab-btn" data-filter="events">Мероприятия &amp; Ивенты (4)</button>
+      <button class="tab-btn" data-filter="promo">Реклама &amp; Пост (3)</button>
+    </div>
 
-          <div style="margin-top:32px;">
-            <span class="mono-label">ЛОКАЦИЯ: МОСКВА // ВЫЕЗДНЫЕ СЪЕМКИ ПО РОССИИ И МИРУ</span>
-          </div>
+    <!-- GRID -->
+    <div class="works-grid-wrap">
+
+      <!-- Case 1: Российская креативная неделя (Events) -->
+      <div class="card" data-category="events">
+        <div class="card-media">
+          <img class="card-img" src="images/rcw_creative_week.jpg" alt="Российская креативная неделя">
+          <div class="card-play"><svg width="13" height="15" fill="#e8e2d4" viewBox="0 0 16 18"><path d="M1 1l14 8L1 17V1z"/></svg></div>
+          <div class="card-player"></div>
         </div>
-
-        <!-- Right: Modern Compact Form with Project Segment Selector -->
-        <div class="contact-form-card">
-          <form id="projectForm">
-            <div class="form-group">
-              <label class="form-field-label">1. Выберите направление съемки</label>
-              <div class="project-type-selector">
-                <button type="button" class="type-chip selected" data-type="Документальный фильм">Документальный фильм</button>
-                <button type="button" class="type-chip" data-type="Мероприятие / Ивент">Мероприятие / Ивент</button>
-                <button type="button" class="type-chip" data-type="Реклама / Промо">Реклама / Промо</button>
-                <button type="button" class="type-chip" data-type="Постпродакшн / Монтаж">Постпродакшн / Монтаж</button>
+        <div class="card-content">
+          <div>
+            <div class="card-header-row">
+              <span class="card-tag">Мероприятие &bull; Федеральный форум</span>
+              <span class="card-badge">Aftermovie // 4K</span>
+            </div>
+            <h3 class="card-title">Российская креативная неделя</h3>
+            <div class="card-b2b-fields">
+              <div class="card-field">
+                <span class="card-field-key">Клиент:</span>
+                <span class="card-field-val"><strong>Форум «Российская креативная неделя» // АНО «Креативная экономика»</strong></span>
+              </div>
+              <div class="card-field">
+                <span class="card-field-key">Задача:</span>
+                <span class="card-field-val">Съемка главного федерального форума креативных индустрий в Парке Горького: павильоны, топ-спикеры, динамичный Aftermovie.</span>
+              </div>
+              <div class="card-field">
+                <span class="card-field-key">Результат:</span>
+                <span class="card-field-val"><strong>Официальный отчетный ролик</strong> для федеральных СМИ, участников, партнеров и оргкомитета.</span>
               </div>
             </div>
-
-            <div class="form-group">
-              <label for="formName" class="form-field-label">2. Ваше имя или название компании</label>
-              <input type="text" id="formName" class="form-input" placeholder="Например: Иван, Мусатова Студио" required>
-            </div>
-
-            <div class="form-group">
-              <label for="formContact" class="form-field-label">3. Контакт для связи (Телефон или Telegram)</label>
-              <input type="text" id="formContact" class="form-input" placeholder="+7 (999) 000-00-00 или @username" required>
-            </div>
-
-            <div class="form-group">
-              <label for="formDesc" class="form-field-label">4. Кратко о задаче (даты, хронометраж, бюджет)</label>
-              <textarea id="formDesc" class="form-textarea" placeholder="Расскажите о проекте или оставьте ссылку на бриф"></textarea>
-            </div>
-
-            <button type="submit" class="form-submit-btn">
-              <span>Отправить бриф в Telegram</span>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M1 8h12M9 4l4 4-4 4"/></svg>
-            </button>
-
-            <p class="form-privacy-note">
-              Нажимая кнопку, вы перейдете в диалог с Денисом Хрусталёвым с готовым текстом вашей заявки.
-            </p>
-          </form>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag">RCW // GORKY PARK</span>
+            <a href="#contacts" class="card-action">Обсудить ивент &rarr;</a>
+          </div>
         </div>
+      </div>
 
+      <!-- Case 2: ИРИ Искажение (Docs) -->
+      <div class="card" data-category="docs" data-id="1173756846">
+        <div class="card-media">
+          <img class="card-img" src="images/vimeo_1173756846.jpg" alt="Искажение">
+          <div class="card-play"><svg width="13" height="15" fill="#e8e2d4" viewBox="0 0 16 18"><path d="M1 1l14 8L1 17V1z"/></svg></div>
+          <div class="card-player"></div>
+        </div>
+        <div class="card-content">
+          <div>
+            <div class="card-header-row">
+              <span class="card-tag">Документальный полный метр</span>
+              <span class="card-badge">ИРИ &bull; 2024</span>
+            </div>
+            <h3 class="card-title">Искажение</h3>
+            <div class="card-b2b-fields">
+              <div class="card-field">
+                <span class="card-field-key">Клиент:</span>
+                <span class="card-field-val"><strong>Институт Развития Интернета (ИРИ)</strong></span>
+              </div>
+              <div class="card-field">
+                <span class="card-field-key">Задача:</span>
+                <span class="card-field-val">Полнометражный документальный фильм с глубоким социальным исследованием и архивными съемками.</span>
+              </div>
+              <div class="card-field">
+                <span class="card-field-key">Результат:</span>
+                <span class="card-field-val"><strong>Официальный релиз и дистрибуция</strong> на федеральных онлайн-платформах.</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag">Full-length // 4K</span>
+            <span class="card-action">Смотреть трейлер &rarr;</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case 3: ТАУ — Фестиваль (Events) -->
+      <div class="card" data-category="events" data-id="1190482719">
+        <div class="card-media">
+          <img class="card-img" src="images/vimeo_1190482719.jpg" alt="ТАУ Фестиваль">
+          <div class="card-play"><svg width="13" height="15" fill="#e8e2d4" viewBox="0 0 16 18"><path d="M1 1l14 8L1 17V1z"/></svg></div>
+          <div class="card-player"></div>
+        </div>
+        <div class="card-content">
+          <div>
+            <div class="card-header-row">
+              <span class="card-tag">Мероприятие &bull; Фестиваль</span>
+              <span class="card-badge">Aftermovie</span>
+            </div>
+            <h3 class="card-title">ТАУ — Фестиваль</h3>
+            <div class="card-b2b-fields">
+              <div class="card-field">
+                <span class="card-field-key">Клиент:</span>
+                <span class="card-field-val"><strong>Оргкомитет Фестиваля ТАУ</strong></span>
+              </div>
+              <div class="card-field">
+                <span class="card-field-key">Задача:</span>
+                <span class="card-field-val">Снять взрывной динамичный Aftermovie, передающий энергетику хедлайнеров, масштаб площадки и свет.</span>
+              </div>
+              <div class="card-field">
+                <span class="card-field-key">Результат:</span>
+                <span class="card-field-val"><strong>Главный промо-ролик фестиваля</strong> для спонсорских отчетов и кампании следующего сезона.</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag">Event // Aftermovie</span>
+            <span class="card-action">Смотреть видео &rarr;</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case 4: Hardcore Fighting Reality (Events) -->
+      <div class="card card-vk" data-category="events" data-href="https://vksport.vkvideo.ru/video-202875834_456240530?pl=-202875834_6">
+        <div class="card-media">
+          <img class="card-img" src="images/hardcore_fighting.jpg" alt="Hardcore Fighting Reality">
+          <div class="card-play"><svg width="13" height="15" fill="#e8e2d4" viewBox="0 0 16 18"><path d="M1 1l14 8L1 17V1z"/></svg></div>
+        </div>
+        <div class="card-content">
+          <div>
+            <div class="card-header-row">
+              <span class="card-tag">Спорт &bull; Шоу &bull; Ивент</span>
+              <span class="card-badge" style="color:var(--gold);">1,4 млн просмотров</span>
+            </div>
+            <h3 class="card-title">Hardcore Fighting Reality</h3>
+            <div class="card-b2b-fields">
+              <div class="card-field">
+                <span class="card-field-key">Клиент:</span>
+                <span class="card-field-val"><strong>Лига Hardcore &bull; VK Video</strong></span>
+              </div>
+              <div class="card-field">
+                <span class="card-field-key">Задача:</span>
+                <span class="card-field-val">Многокамерная съемка турнирного реалити-шоу в жестком репортажном темпе с драматургией боев.</span>
+              </div>
+              <div class="card-field">
+                <span class="card-field-key">Результат:</span>
+                <span class="card-field-val"><strong>1,4 млн просмотров в VK Video</strong>, топ трендов спортивного контента.</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag">VK Video // Reality</span>
+            <span class="card-action">Смотреть в VK &nearr;</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case 5: Alf Reality (Events) -->
+      <div class="card card-yt" data-category="events" data-href="https://www.youtube.com/watch?v=TX6wJ-E-OvE&list=PL458JhnKFrqd6jfcn1OzXo03MdfB0Prj9&index=13">
+        <div class="card-media">
+          <img class="card-img" src="images/alf_reality.jpg" alt="Alf Reality">
+          <div class="card-play"><svg width="13" height="15" fill="#e8e2d4" viewBox="0 0 16 18"><path d="M1 1l14 8L1 17V1z"/></svg></div>
+        </div>
+        <div class="card-content">
+          <div>
+            <div class="card-header-row">
+              <span class="card-tag">Медиа-шоу &bull; Ивент</span>
+              <span class="card-badge" style="color:var(--gold);">2,3 млн просмотров</span>
+            </div>
+            <h3 class="card-title">Alf Reality</h3>
+            <div class="card-b2b-fields">
+              <div class="card-field">
+                <span class="card-field-key">Клиент:</span>
+                <span class="card-field-val"><strong>Alf Reality &bull; YouTube</strong></span>
+              </div>
+              <div class="card-field">
+                <span class="card-field-key">Задача:</span>
+                <span class="card-field-val">Съемка медийно-спортивного реалити с динамичным сетапом камер, светом и звуком.</span>
+              </div>
+              <div class="card-field">
+                <span class="card-field-key">Результат:</span>
+                <span class="card-field-val"><strong>2,3 млн просмотров серии на YouTube</strong>, виральный охват аудитории.</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag">YouTube // Reality</span>
+            <span class="card-action">Смотреть на YouTube &nearr;</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case 6: Сбер Ассистент (Promo) -->
+      <div class="card" data-category="promo" data-id="1190482600">
+        <div class="card-media">
+          <img class="card-img" src="images/vimeo_1190482600.jpg" alt="Сбер Ассистент">
+          <div class="card-play"><svg width="13" height="15" fill="#e8e2d4" viewBox="0 0 16 18"><path d="M1 1l14 8L1 17V1z"/></svg></div>
+          <div class="card-player"></div>
+        </div>
+        <div class="card-content">
+          <div>
+            <div class="card-header-row">
+              <span class="card-tag">Реклама &bull; Сбер</span>
+              <span class="card-badge">2024</span>
+            </div>
+            <h3 class="card-title">Сбер Ассистент</h3>
+            <div class="card-b2b-fields">
+              <div class="card-field">
+                <span class="card-field-key">Клиент:</span>
+                <span class="card-field-val"><strong>ПАО Сбербанк</strong></span>
+              </div>
+              <div class="card-field">
+                <span class="card-field-key">Задача:</span>
+                <span class="card-field-val">Промо-ролик для демонстрации возможностей смарт-ассистента в живых пользовательских сценариях.</span>
+              </div>
+              <div class="card-field">
+                <span class="card-field-key">Результат:</span>
+                <span class="card-field-val"><strong>Интеграция в федеральную продуктовую кампанию</strong> Сбера.</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag">Commercial // Tech</span>
+            <span class="card-action">Смотреть ролик &rarr;</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case 7: Антоша из шестой (Promo / Post) -->
+      <div class="card" data-category="promo" data-id="1190482143">
+        <div class="card-media">
+          <img class="card-img" src="images/vimeo_1190482143.jpg" alt="Антоша из шестой" style="object-position:center top;">
+          <div class="card-play"><svg width="13" height="15" fill="#e8e2d4" viewBox="0 0 16 18"><path d="M1 1l14 8L1 17V1z"/></svg></div>
+          <div class="card-player"></div>
+        </div>
+        <div class="card-content">
+          <div>
+            <div class="card-header-row">
+              <span class="card-tag">Пост-продакшн &bull; Wink</span>
+              <span class="card-badge">Стриминг</span>
+            </div>
+            <h3 class="card-title">Антоша из шестой</h3>
+            <div class="card-b2b-fields">
+              <div class="card-field">
+                <span class="card-field-key">Клиент:</span>
+                <span class="card-field-val"><strong>Онлайн-кинотеатр Wink</strong></span>
+              </div>
+              <div class="card-field">
+                <span class="card-field-key">Задача:</span>
+                <span class="card-field-val">Полный комплекс монтажа, цветокоррекции и мастеринга под строгие стандарты OTT-платформы.</span>
+              </div>
+              <div class="card-field">
+                <span class="card-field-key">Результат:</span>
+                <span class="card-field-val"><strong>Приемка мастер-копии без замечаний</strong>, премьера в подписке стриминга.</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag">Post // Color &amp; Sound</span>
+            <span class="card-action">Смотреть шоурил &rarr;</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case 8: Balancer Light (Promo) -->
+      <div class="card card-yt" data-category="promo" data-href="https://youtu.be/ujgLai9Aqb4">
+        <div class="card-media">
+          <img class="card-img" src="images/balancer_light.jpg" alt="Balancer Light">
+          <div class="card-play"><svg width="13" height="15" fill="#e8e2d4" viewBox="0 0 16 18"><path d="M1 1l14 8L1 17V1z"/></svg></div>
+        </div>
+        <div class="card-content">
+          <div>
+            <div class="card-header-row">
+              <span class="card-tag">Пост-продакшн &bull; Реклама</span>
+              <span class="card-badge">Digital</span>
+            </div>
+            <h3 class="card-title">Balancer Light</h3>
+            <div class="card-b2b-fields">
+              <div class="card-field">
+                <span class="card-field-key">Клиент:</span>
+                <span class="card-field-val"><strong>Бренд здорового питания Balancer</strong></span>
+              </div>
+              <div class="card-field">
+                <span class="card-field-key">Задача:</span>
+                <span class="card-field-val">Сочный динамичный рекламный ролик для продвижения линейки в digital-каналах.</span>
+              </div>
+              <div class="card-field">
+                <span class="card-field-key">Результат:</span>
+                <span class="card-field-val"><strong>Высокие показатели CTR</strong> и вовлеченности в рекламных кампаниях.</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag">Ad // Commercial</span>
+            <span class="card-action">Смотреть ролик &nearr;</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Reels Strip -->
+    <div class="reels-section-wrap">
+      <div class="reels-intro">
+        <div>
+          <div class="sec-tag" style="margin-bottom:12px;">Вертикальный формат</div>
+          <h3 class="card-title" style="margin-bottom:0;">Черка Трова — <em>рилсы</em></h3>
+        </div>
+        <span class="card-tag">Short-form // 9:16</span>
+      </div>
+      <div class="grid-reels">
+        <div class="card reel" data-id="1190482799">
+          <img class="card-img" src="images/vimeo_1190482799.jpg" alt="Reel 1">
+          <div class="card-play"><svg width="13" height="15" fill="#e8e2d4" viewBox="0 0 16 18"><path d="M1 1l14 8L1 17V1z"/></svg></div>
+          <div class="card-player"></div>
+        </div>
+        <div class="card reel" data-id="1190482836">
+          <img class="card-img" src="images/vimeo_1190482836.jpg" alt="Reel 2">
+          <div class="card-play"><svg width="13" height="15" fill="#e8e2d4" viewBox="0 0 16 18"><path d="M1 1l14 8L1 17V1z"/></svg></div>
+          <div class="card-player"></div>
+        </div>
+        <div class="card reel" data-id="1190482870">
+          <img class="card-img" src="images/vimeo_1190482870.jpg" alt="Reel 3">
+          <div class="card-play"><svg width="13" height="15" fill="#e8e2d4" viewBox="0 0 16 18"><path d="M1 1l14 8L1 17V1z"/></svg></div>
+          <div class="card-player"></div>
+        </div>
+        <div class="card reel" data-id="1190482932">
+          <img class="card-img" src="images/vimeo_1190482932.jpg" alt="Reel 4">
+          <div class="card-play"><svg width="13" height="15" fill="#e8e2d4" viewBox="0 0 16 18"><path d="M1 1l14 8L1 17V1z"/></svg></div>
+          <div class="card-player"></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ==========================================================================
-       FOOTER
-       ========================================================================== -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>
-        <span>&copy; 2026 ХРУСТАЛЁВ ПРОДАКШН</span>
-        <span style="margin-left:12px; color:var(--text-dim);">// ВСЕ ПРАВА ЗАЩИЩЕНЫ</span>
+  <!-- ─── PROCESS ─── -->
+  <section id="process" class="process">
+    <div class="sec-tag">Процесс</div>
+    <h2 class="sec-heading">Как устроена <em>работа</em></h2>
+    <div class="process-grid">
+      <div class="process-step">
+        <div class="step-num">01 / Pre-production</div>
+        <div class="step-big">1</div>
+        <div class="step-title">Погружение &amp; Бриф</div>
+        <p class="step-text">Изучаю контекст бизнеса, героев и цели. Находим драматургический стержень до начала съёмок.</p>
       </div>
-
-      <div class="footer-nav">
-        <a href="#directions">Направления</a>
-        <a href="#portfolio">Портфолио</a>
-        <a href="#process">Процесс</a>
-        <a href="#contacts">Контакты</a>
-        <a href="https://t.me/ygscors" target="_blank">Telegram</a>
+      <div class="process-step">
+        <div class="step-num">02 / Concept</div>
+        <div class="step-big">2</div>
+        <div class="step-title">Сценарий &amp; План</div>
+        <p class="step-text">Определяем структуру, таймлайн и сетап оборудования — согласовываем смету и график без сюрпризов.</p>
       </div>
-
-      <div>
-        <span>MOSCOW // WORLDWIDE</span>
+      <div class="process-step">
+        <div class="step-num">03 / Production</div>
+        <div class="step-big">3</div>
+        <div class="step-title">Съёмка &amp; Режиссура</div>
+        <p class="step-text">Кинооптика, свет, многокамерные сетапы на ивентах. Делаю так, чтобы герои перед камерой были настоящими.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">04 / Post-production</div>
+        <div class="step-big">4</div>
+        <div class="step-title">Монтаж, Звук, Цвет</div>
+        <p class="step-text">Сборка истории, цветокоррекция, авторский саунд-дизайн и мастеринг мастер-копий для любых платформ.</p>
       </div>
     </div>
+  </section>
+
+  <!-- ─── ABOUT ─── -->
+  <section id="about" class="about-page">
+    <div class="about-intro">
+      <div class="about-photo">
+        <img src="images/denis_portrait.jpg" alt="Денис Хрусталёв">
+        <div class="about-photo-label">Денис Хрусталёв</div>
+      </div>
+      <div class="about-content">
+        <div class="sec-tag">Обо мне</div>
+        <h2 class="about-headline">Режиссёр<br><em>документального</em><br>кино</h2>
+        <div class="about-role">Режиссёр &bull; Продюсер &bull; 10+ лет</div>
+        <p class="about-text">Меня зовут Денис Хрусталёв. Я занимаюсь документальным и бренд-кино, а также съемкой масштабных ивентов — создаю видео, которое заслуживает того, чтобы его досмотрели до конца.</p>
+        <p class="about-text">Значительную часть карьеры я провёл в пост-продакшене, поэтому доведение проекта до безупречной финальной сдачи и соблюдение сроков для меня принципиально важно.</p>
+        <p class="about-text">Мы работаем связкой: режиссура и творческое видение + жесткий продюсерский контроль сметы и графиков.</p>
+      </div>
+    </div>
+
+    <div class="team-section">
+      <div class="team-intro">
+        <div class="sec-tag">Команда</div>
+        <div>
+          <h3 class="sec-heading">Главная сила —<br><em>в людях</em></h3>
+          <p class="sec-sub" style="margin-top:20px;">За 10 лет работы в продакшн-индустрии я сформировал круг проверенных специалистов. Продюсирование, операторские группы, гафферы, звукорежиссеры — с каждым мы сработались на сложных проектах.</p>
+        </div>
+      </div>
+      <div class="team-photos">
+        <div class="team-photo"><img src="images/team_18.jpg" alt="Команда 1"></div>
+        <div class="team-photo"><img src="images/team_19.jpg" alt="Команда 2"></div>
+        <div class="team-photo"><img src="images/team_20.jpg" alt="Команда 3"></div>
+        <div class="team-photo"><img src="images/team_21.jpg" alt="Команда 4"></div>
+        <div class="team-photo"><img src="images/team_22.jpg" alt="Команда 5"></div>
+        <div class="team-photo"><img src="images/denis_khrustalev.jpg" alt="Команда 6"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACTS ─── -->
+  <section id="contacts" class="contacts">
+    <div class="contacts-inner">
+      <div class="contacts-left">
+        <div class="sec-tag">Контакты</div>
+        <h2 class="contacts-heading">Есть<br><em>проект?</em><br>Расскажите</h2>
+        <p class="contacts-desc">Оставьте заявку или напишите напрямую — оперативно обсудим формат, локацию, смету и съемочные даты.</p>
+        <ul class="contacts-list">
+          <li>
+            <span class="contacts-list-label">Продюсер</span>
+            <div>
+              <a href="https://wa.me/79067084167" target="_blank">Алексей Фёдоров</a>
+              <div style="font-size:12px; color:var(--gold2); margin-top:4px;">
+                <a href="tel:+79067084167">+7 (906) 708-41-67</a> &bull; WhatsApp / Звонок
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="contacts-list-label">Режиссёр</span>
+            <div>
+              <a href="https://t.me/ygscors" target="_blank">Денис Хрусталёв</a>
+              <div style="font-size:12px; color:var(--gold2); margin-top:4px;">
+                <a href="https://t.me/ygscors" target="_blank">@ygscors</a> &bull; Telegram
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="contacts-list-label">Email</span>
+            <a href="mailto:khrustalev69@gmail.com">khrustalev69@gmail.com</a>
+          </li>
+          <li>
+            <span class="contacts-list-label">Телефон</span>
+            <a href="tel:+79067084167">+7 (906) 708-41-67</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Compact Form with Chips Selector -->
+      <div class="contact-form">
+        <div class="form-type-row">
+          <label class="form-label">Тип съемки</label>
+          <div class="type-chips-grid">
+            <button type="button" class="chip-btn selected" data-type="Документальный фильм">Документальный фильм</button>
+            <button type="button" class="chip-btn" data-type="Мероприятие / Ивент">Мероприятие / Ивент</button>
+            <button type="button" class="chip-btn" data-type="Реклама / Промо">Реклама / Промо</button>
+            <button type="button" class="chip-btn" data-type="Пост-продакшн / Монтаж">Пост-продакшн / Монтаж</button>
+          </div>
+        </div>
+
+        <label class="form-label">Ваше имя или компания</label>
+        <input class="form-input" id="clientName" type="text" placeholder="Как вас зовут / Бренд">
+
+        <label class="form-label">Контакт для связи</label>
+        <input class="form-input" id="clientContact" type="text" placeholder="Телефон или Telegram">
+
+        <label class="form-label">О проекте</label>
+        <textarea class="form-textarea" id="clientProject" placeholder="В двух словах о задаче, датах или ссылку на бриф"></textarea>
+
+        <button class="form-btn" onclick="sendForm()">Отправить заявку в Telegram &rarr;</button>
+        <p class="form-subtext">Заявка сразу откроется в Telegram с предзаполненными деталями</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer>
+    <span>&copy; 2026 &bull; Хрусталёв Продакшн</span>
+    <span>Документальное кино и съемка мероприятий</span>
+    <span>Москва &bull; Выездные съемки по миру</span>
   </footer>
 
   <script src="script.js"></script>
