@@ -158,28 +158,64 @@ function initFormSubmission() {
       `• Клиент: ${name}\n` +
       `• Контакт: ${contact}\n` +
       (desc ? `• Детали проекта: ${desc}\n` : '') +
-      `\nСвязь с продюсером: Алексей Фёдоров (+79067084167)\nРежиссёр: Денис Хрусталёв (@ygscors)`;
+      `
+Контакты продакшна:
+• Продюсер, Режиссер: Денис Хрусталёв (+79990956954, @ygscors)
+• Продюсер: Алексей Фёдоров (+79067084167)`;
 
     const telegramUrl = `https://t.me/ygscors?text=${encodeURIComponent(message)}`;
     window.open(telegramUrl, '_blank');
   });
 }
 
-/* 6. MOBILE NAV */
+/* 6. MOBILE NAV (INTUITIVE FULLSCREEN DRAWER WITH SMOOTH TRANSITION) */
 function initMobileNav() {
   const toggleBtn = document.querySelector('.mobile-menu-toggle');
+  const drawer = document.getElementById('mobileDrawer');
   const body = document.body;
-  const navLinks = document.querySelectorAll('.nav-link, .header-cta-btn');
+  const mobileLinks = document.querySelectorAll('.mobile-nav-link, .mobile-drawer-cta');
 
-  if (!toggleBtn) return;
+  if (!toggleBtn || !drawer) return;
 
-  toggleBtn.addEventListener('click', () => {
-    body.classList.toggle('mobile-nav-active');
+  function openMenu() {
+    body.classList.add('mobile-nav-open');
+    body.style.overflow = 'hidden';
+  }
+
+  function closeMenu() {
+    body.classList.remove('mobile-nav-open');
+    body.style.overflow = '';
+  }
+
+  toggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (body.classList.contains('mobile-nav-open')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
   });
 
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      body.classList.remove('mobile-nav-active');
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      const href = link.getAttribute('href');
+      closeMenu();
+      if (href && href.startsWith('#')) {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          setTimeout(() => {
+            target.scrollIntoView({ behavior: 'smooth' });
+          }, 120);
+        }
+      }
     });
+  });
+
+  // Close when pressing Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && body.classList.contains('mobile-nav-open')) {
+      closeMenu();
+    }
   });
 }

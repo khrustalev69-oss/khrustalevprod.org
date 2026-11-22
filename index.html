@@ -48,6 +48,44 @@
   </header>
 
   <!-- ==========================================================================
+       MOBILE NAVIGATION DRAWER (FULLSCREEN INTUITIVE OVERLAY)
+       ========================================================================== -->
+  <div class="mobile-nav-drawer" id="mobileDrawer">
+    <div class="mobile-menu-content">
+      <div class="mobile-drawer-eyebrow mono-tag">
+        // МЕНЮ ПРОДАКШНА &bull; DOC &amp; EVENTS
+      </div>
+      <ul class="mobile-menu-links">
+        <li><a href="#directions" class="mobile-nav-link"><span>01</span> НАПРАВЛЕНИЯ</a></li>
+        <li><a href="#featured" class="mobile-nav-link"><span>02</span> КЕЙС</a></li>
+        <li><a href="#portfolio" class="mobile-nav-link"><span>03</span> ПОРТФОЛИО</a></li>
+        <li><a href="#process" class="mobile-nav-link"><span>04</span> ПРОЦЕСС</a></li>
+        <li><a href="#about" class="mobile-nav-link"><span>05</span> О НАС</a></li>
+        <li><a href="#contacts" class="mobile-nav-link"><span>06</span> КОНТАКТЫ</a></li>
+      </ul>
+
+      <div class="mobile-drawer-bottom">
+        <a href="#contacts" class="btn-primary-gold mobile-drawer-cta">ОБСУДИТЬ ПРОЕКТ &rarr;</a>
+        
+        <div class="mobile-drawer-contacts">
+          <a href="tel:+79990956954" class="mobile-contact-line">
+            <span>Денис Хрусталёв (Режиссер, Продюсер):</span>
+            <strong>+7 (999) 095-69-54</strong>
+          </a>
+          <a href="tel:+79067084167" class="mobile-contact-line">
+            <span>Алексей Фёдоров (Продюсер):</span>
+            <strong>+7 (906) 708-41-67</strong>
+          </a>
+          <a href="https://t.me/ygscors" target="_blank" class="mobile-contact-line">
+            <span>Telegram:</span>
+            <strong>@ygscors</strong>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
        HERO SECTION (DIRECT B2B OFFER + CINEMATIC FRAMES + 2 CTA)
        ========================================================================== -->
   <section class="hero-section">
@@ -295,9 +333,9 @@
 
       <!-- Navigation Tabs -->
       <div class="portfolio-tabs-nav">
-        <button class="tab-btn active" data-filter="all">Все проекты <span class="tab-count">(8)</span></button>
-        <button class="tab-btn" data-filter="docs">Документальные фильмы <span class="tab-count">(2)</span></button>
-        <button class="tab-btn" data-filter="events">Мероприятия &amp; Ивенты <span class="tab-count">(4)</span></button>
+        <button class="tab-btn active" data-filter="all">Все проекты <span class="tab-count">(6)</span></button>
+        <button class="tab-btn" data-filter="docs">Документальные фильмы <span class="tab-count">(1)</span></button>
+        <button class="tab-btn" data-filter="events">Мероприятия &amp; Ивенты <span class="tab-count">(2)</span></button>
         <button class="tab-btn" data-filter="promo">Реклама &amp; Постпродакшн <span class="tab-count">(3)</span></button>
       </div>
 
@@ -306,13 +344,14 @@
 
         <!-- Case 1: Российская креативная неделя (Events) -->
         <div class="case-card" data-category="events">
-          <div class="case-card-media">
+          <div class="case-card-media" data-vimeo-id="1249162291">
             <span class="case-card-badge mono-tag">МЕРОПРИЯТИЕ &bull; ФЕДЕРАЛЬНЫЙ ФОРУМ</span>
-            <span class="case-card-duration">AFTERMOVIE // 4K</span>
+            <span class="case-card-duration">VIMEO // 4K</span>
             <img src="images/rcw_creative_week.jpg" alt="Российская креативная неделя">
             <div class="card-play-icon">
               <svg width="15" height="17" viewBox="0 0 16 18" fill="#c9a961"><path d="M1 1l14 8L1 17V1z"/></svg>
             </div>
+            <div class="card-player"></div>
           </div>
           <div class="case-card-body">
             <div>
@@ -334,7 +373,7 @@
             </div>
             <div class="case-card-footer">
               <span class="mono-label">RCW // GORKY PARK</span>
-              <a href="#contacts" class="link-action">Обсудить подобный ивент &rarr;</a>
+              <a href="https://vimeo.com/1249162291" target="_blank" rel="noopener" class="link-action">Смотреть на Vimeo &rarr;</a>
             </div>
           </div>
         </div>
@@ -411,77 +450,7 @@
           </div>
         </div>
 
-        <!-- Case 4: Hardcore Fighting Reality (Events) -->
-        <div class="case-card" data-category="events">
-          <div class="case-card-media" data-external-url="https://vksport.vkvideo.ru/video-202875834_456240530?pl=-202875834_6">
-            <span class="case-card-badge mono-tag">СПОРТ &bull; ИВЕНТ &bull; РЕАЛИТИ</span>
-            <span class="case-card-duration">1.4 МЛН ПРОСМОТРОВ</span>
-            <img src="images/hardcore_fighting.jpg" alt="Hardcore Fighting Reality">
-            <div class="card-play-icon">
-              <svg width="15" height="17" viewBox="0 0 16 18" fill="#c9a961"><path d="M1 1l14 8L1 17V1z"/></svg>
-            </div>
-          </div>
-          <div class="case-card-body">
-            <div>
-              <h3 class="case-card-title">Hardcore Fighting Reality</h3>
-              <div class="case-structured-info">
-                <div class="info-line">
-                  <span class="info-key">Клиент:</span>
-                  <span class="info-val"><strong>Лига Hardcore &bull; VK Video</strong></span>
-                </div>
-                <div class="info-line">
-                  <span class="info-key">Задача:</span>
-                  <span class="info-val">Многокамерная съемка спортивного реалити-турнира с быстрым репортажным темпом и драматичным монтажом боев.</span>
-                </div>
-                <div class="info-line">
-                  <span class="info-key">Результат:</span>
-                  <span class="info-val"><strong>1,4 млн просмотров в VK Video</strong>, удержание внимания аудитории и высокий уровень продакшна трансляции.</span>
-                </div>
-              </div>
-            </div>
-            <div class="case-card-footer">
-              <span class="mono-label">VK VIDEO // 1.4M VIEWS</span>
-              <a href="https://vksport.vkvideo.ru/video-202875834_456240530?pl=-202875834_6" target="_blank" class="link-action">Смотреть в VK Video &nearr;</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Case 5: Alf Reality (Events) -->
-        <div class="case-card" data-category="events">
-          <div class="case-card-media" data-external-url="https://www.youtube.com/watch?v=TX6wJ-E-OvE&list=PL458JhnKFrqd6jfcn1OzXo03MdfB0Prj9&index=13">
-            <span class="case-card-badge mono-tag">МЕДИА-ШОУ &bull; ИВЕНТ</span>
-            <span class="case-card-duration">2.3 МЛН ПРОСМОТРОВ</span>
-            <img src="images/alf_reality.jpg" alt="Alf Reality">
-            <div class="card-play-icon">
-              <svg width="15" height="17" viewBox="0 0 16 18" fill="#c9a961"><path d="M1 1l14 8L1 17V1z"/></svg>
-            </div>
-          </div>
-          <div class="case-card-body">
-            <div>
-              <h3 class="case-card-title">Alf Reality</h3>
-              <div class="case-structured-info">
-                <div class="info-line">
-                  <span class="info-key">Клиент:</span>
-                  <span class="info-val"><strong>Alf Reality &bull; YouTube</strong></span>
-                </div>
-                <div class="info-line">
-                  <span class="info-key">Задача:</span>
-                  <span class="info-val">Съемка медийно-спортивного реалити на стыке динамичного экшна, живых конфликтов и качественного звука.</span>
-                </div>
-                <div class="info-line">
-                  <span class="info-key">Результат:</span>
-                  <span class="info-val"><strong>2,3 млн просмотров серии на YouTube</strong>, попадание в тренды и виральный охват в соцсетях.</span>
-                </div>
-              </div>
-            </div>
-            <div class="case-card-footer">
-              <span class="mono-label">YOUTUBE // 2.3M VIEWS</span>
-              <a href="https://www.youtube.com/watch?v=TX6wJ-E-OvE&list=PL458JhnKFrqd6jfcn1OzXo03MdfB0Prj9&index=13" target="_blank" class="link-action">Смотреть на YouTube &nearr;</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Case 6: Сбер Ассистент (Promo) -->
+        <!-- Case 4: Сбер Ассистент (Promo) -->
         <div class="case-card" data-category="promo">
           <div class="case-card-media" data-vimeo-id="1190482600">
             <span class="case-card-badge mono-tag">РЕКЛАМА &bull; ПРОДУКТОВЫЙ РОЛИК</span>
@@ -517,7 +486,7 @@
           </div>
         </div>
 
-        <!-- Case 7: Антоша из шестой (Promo / Post) -->
+        <!-- Case 5: Антоша из шестой (Promo / Post) -->
         <div class="case-card" data-category="promo">
           <div class="case-card-media" data-vimeo-id="1190482143">
             <span class="case-card-badge mono-tag">ПОСТПРОДАКШН &bull; СТРИМИНГ</span>
@@ -553,7 +522,7 @@
           </div>
         </div>
 
-        <!-- Case 8: Balancer Light (Promo) -->
+        <!-- Case 6: Balancer Light (Promo) -->
         <div class="case-card" data-category="promo">
           <div class="case-card-media" data-external-url="https://youtu.be/ujgLai9Aqb4">
             <span class="case-card-badge mono-tag">РЕКЛАМА &bull; DIGITAL</span>
@@ -727,12 +696,12 @@
 
           <div class="about-pillars">
             <div class="pillar-item">
-              <span class="pillar-title">// Продюсер проекта: Алексей Фёдоров</span>
-              <p class="pillar-desc">Контроль сметы, логистика съемочных групп, даты и соблюдение дедлайнов. Тел: +7 (906) 708-41-67</p>
+              <span class="pillar-title">// Продюсер, Режиссер: Денис Хрусталёв</span>
+              <p class="pillar-desc">Драматургия, смыслы, режиссура монтажа и визуальная концепция. Тел: +7 (999) 095-69-54 &bull; TG: @ygscors</p>
             </div>
             <div class="pillar-item">
-              <span class="pillar-title">// Режиссура: Денис Хрусталёв</span>
-              <p class="pillar-desc">Драматургия, смыслы, режиссура монтажа и кинотеатральное качество картинки и звука.</p>
+              <span class="pillar-title">// Продюсер: Алексей Фёдоров</span>
+              <p class="pillar-desc">Контроль сметы, логистика съемочных групп, даты съемок и график сдачи. Тел: +7 (906) 708-41-67</p>
             </div>
           </div>
         </div>
@@ -782,30 +751,39 @@
 
             <ul class="direct-channels-list">
               <li>
-                <a href="https://wa.me/79067084167" target="_blank" class="channel-card" style="border-left: 2px solid var(--gold);">
+                <a href="tel:+79990956954" class="channel-card" style="border-left: 2px solid var(--gold);">
                   <div class="channel-info">
-                    <span class="channel-name">Продюсер &bull; Алексей Фёдоров (WhatsApp / Звонок)</span>
-                    <span class="channel-value">+7 (906) 708-41-67</span>
+                    <span class="channel-name">Продюсер, Режиссер &bull; Денис Хрусталёв</span>
+                    <span class="channel-value">+7 (999) 095-69-54</span>
                   </div>
-                  <span class="link-action">Связаться &nearr;</span>
+                  <span class="link-action">Позвонить &nearr;</span>
                 </a>
               </li>
               <li>
-                <a href="https://t.me/ygscors" target="_blank" class="channel-card">
+                <a href="https://t.me/ygscors" target="_blank" rel="noopener" class="channel-card">
                   <div class="channel-info">
-                    <span class="channel-name">Режиссёр &bull; Денис Хрусталёв (Telegram)</span>
+                    <span class="channel-name">Денис Хрусталёв &bull; Telegram</span>
                     <span class="channel-value">@ygscors</span>
                   </div>
                   <span class="link-action">Написать &nearr;</span>
                 </a>
               </li>
               <li>
-                <a href="tel:+79067084167" class="channel-card">
+                <a href="tel:+79067084167" class="channel-card" style="border-left: 2px solid var(--gold);">
                   <div class="channel-info">
-                    <span class="channel-name">Прямой звонок продюсеру</span>
+                    <span class="channel-name">Продюсер &bull; Алексей Фёдоров</span>
                     <span class="channel-value">+7 (906) 708-41-67</span>
                   </div>
                   <span class="link-action">Позвонить &nearr;</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://wa.me/79067084167" target="_blank" rel="noopener" class="channel-card">
+                  <div class="channel-info">
+                    <span class="channel-name">Алексей Фёдоров &bull; WhatsApp</span>
+                    <span class="channel-value">+7 (906) 708-41-67</span>
+                  </div>
+                  <span class="link-action">Написать &nearr;</span>
                 </a>
               </li>
               <li>
@@ -840,7 +818,7 @@
 
             <div class="form-group">
               <label for="formName" class="form-field-label">2. Ваше имя или название компании</label>
-              <input type="text" id="formName" class="form-input" placeholder="Например: Иван, Мусатова Студио" required>
+              <input type="text" id="formName" class="form-input" placeholder="Например: Иван Иванов" required>
             </div>
 
             <div class="form-group">
