@@ -379,12 +379,12 @@ img {
    Titles: Ultra-clean bold Grotesque (Inter) with radiant champagne gold emphasis. */
 .hero-main-title {
   font-family: var(--font-sans);
-  font-size: clamp(34px, 5.2vw, 72px);
+  font-size: clamp(30px, 4.2vw, 62px);
   font-weight: 700;
-  line-height: 1.08;
+  line-height: 1.1;
   letter-spacing: -0.03em;
   color: #ffffff;
-  margin-bottom: 22px;
+  margin-bottom: 24px;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
 }
 
@@ -400,12 +400,19 @@ img {
 }
 
 .hero-lead-text {
-  font-size: clamp(15px, 1.5vw, 19px);
+  font-size: clamp(15px, 1.35vw, 18px);
   line-height: 1.6;
   font-weight: 300;
   color: var(--text-cream);
-  max-width: 780px;
+  max-width: 740px;
+  margin-bottom: 14px;
+}
+
+.hero-lead-accent {
+  color: #ffffff;
+  font-weight: 400;
   margin-bottom: 32px;
+  opacity: 0.95;
 }
 
 .hero-actions {
@@ -469,31 +476,33 @@ img {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 28px;
-  padding-top: 40px;
+  padding-top: 36px;
   border-top: 1px solid var(--border-subtle);
-  margin-top: 56px;
+  margin-top: 48px;
 }
 
 .meta-item {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 6px;
 }
 
 .meta-item-val {
   font-family: var(--font-sans);
-  font-size: 24px;
+  font-size: clamp(16px, 1.35vw, 21px);
   font-weight: 700;
   color: var(--gold);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
+  line-height: 1.25;
   font-variant-numeric: tabular-nums lining-nums;
   text-shadow: 0 0 20px rgba(201, 169, 97, 0.25);
 }
 
 .meta-item-desc {
   font-family: var(--font-mono);
-  font-size: 9px;
-  letter-spacing: 0.14em;
+  font-size: 9.5px;
+  line-height: 1.45;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text-soft);
 }
@@ -620,13 +629,52 @@ img {
 .direction-card {
   background: linear-gradient(180deg, rgba(22, 21, 19, 0.95) 0%, rgba(13, 12, 11, 0.98) 100%);
   border: 1px solid var(--border-subtle);
-  padding: 52px 44px;
+  padding: 48px 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 100%;
   transition: var(--transition-smooth);
   box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.75);
   position: relative;
+}
+
+.direction-card-main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.direction-school-badge {
+  background: rgba(201, 169, 97, 0.04);
+  border-left: 2px solid var(--gold);
+  padding: 14px 18px;
+  margin: 0 0 28px 0;
+  border-radius: 0 2px 2px 0;
+  backdrop-filter: blur(8px);
+}
+
+.school-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 6px;
+}
+
+.school-text {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--text-cream);
+  font-weight: 300;
+  margin: 0;
+}
+
+.direction-card-action {
+  margin-top: auto;
+  padding-top: 8px;
 }
 
 .direction-card::before {
@@ -1900,6 +1948,19 @@ body.mobile-nav-open .mobile-nav-drawer {
   }
 
   .hero-cell-grid { grid-template-columns: 1fr; }
+  .hero-meta-bar {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 16px;
+    margin-top: 36px;
+    padding-top: 24px;
+  }
+  .direction-card {
+    padding: 34px 22px;
+  }
+  .direction-school-badge {
+    padding: 12px 14px;
+    margin-bottom: 22px;
+  }
   .project-type-selector { grid-template-columns: 1fr; }
   .case-meta-row, .info-line { grid-template-columns: 1fr; gap: 4px; }
   .case-stats-strip { grid-template-columns: 1fr 1fr; }
