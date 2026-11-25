@@ -104,6 +104,7 @@ img {
 }
 
 @media (max-width: 768px) {
+  .desktop-br { display: none; }
   .container {
     padding: 0 20px;
   }
@@ -398,6 +399,10 @@ img {
 /* ─── TYPOGRAPHY CALIBRATION: CLEAN, CONFIDENT & COHESIVE ───
    No weird cursive loops, no awkward Cyrillic glyphs or font mismatches.
    Titles: Ultra-clean bold Grotesque (Inter) with radiant champagne gold emphasis. */
+.desktop-br {
+  display: inline;
+}
+
 .hero-main-title {
   font-family: var(--font-sans);
   font-size: clamp(30px, 4.2vw, 62px);
