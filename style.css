@@ -386,7 +386,7 @@ img {
   z-index: 4;
   margin-top: auto;
   margin-bottom: auto;
-  max-width: 1060px;
+  max-width: 1160px;
 }
 
 .hero-eyebrow-row {
@@ -403,9 +403,20 @@ img {
   display: inline;
 }
 
+
+.hero-title-line {
+  display: block;
+}
+
+@media (min-width: 920px) {
+  .hero-title-line {
+    white-space: nowrap;
+  }
+}
+
 .hero-main-title {
   font-family: var(--font-sans);
-  font-size: clamp(30px, 4.2vw, 62px);
+  font-size: clamp(26px, 3.4vw, 50px);
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.03em;
